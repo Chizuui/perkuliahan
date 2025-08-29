@@ -1,13 +1,14 @@
 name = input("Your name is: ")
 age = input("Your age is: ")
 
-print("Hello " + name + ", you are " + age + " years old.")
+#print("Hello " + name + ", you are " + age + " years old.")
+print(f"Hello {name}.")
 
 print("Hello World")
 
-umur = 25
+age = int(input("Masukkan Umur Kamu: "))
 
-if (umur > 30):
-    print ("Umur Mu Diatas 30 Tahun")
+if age > 30:
+    print("Umur Mu Diatas 30 Tahun")
 else:
-    print ("Umur Mu Masih Di Bawah 30 Tahun")
+    print("Umur Mu Masih Di Bawah 30 Tahun")
