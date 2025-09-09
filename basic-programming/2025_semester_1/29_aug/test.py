@@ -20,3 +20,4 @@ print(var1, var2, var3)
 print (matakuliah)
 del (matakuliah)
 print ("Matakuliah telah dihapus")
+
