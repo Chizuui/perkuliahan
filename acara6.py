@@ -27,3 +27,8 @@ type(angka13)
 angka14=memoryview(bytes(5))
 type(angka14)
 print(angka1, angka2, angka3, angka4, angka5, angka6, angka7, angka8, angka9, angka10, angka11, angka12, angka13, angka14)
+del(angka4)
+print("angka4 telah dihapus")
+print(angka1, angka2, angka3, angka5, angka6, angka7, angka8, angka9, angka10, angka11, angka12, angka13, angka14)
+# print(angka4) # This will raise an error because angka4 has been deleted
+
