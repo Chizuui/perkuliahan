@@ -11,3 +11,12 @@ age = input("Enter your age: ")
 
 # Print a message with the user's age
 print("You are", age, "years old.")
+
+
+var = int(input("Enter an Number: "))  # Convert input to integer
+print("You entered the Number:", var)
+flt = float(input("Enter a floating-point number: "))  # Convert input to float
+print("You entered the float:", flt)
+# Demonstrating formatted output
+print("Formatted output: Name: {}, Age: {}, Integer: {}, Float: {:.2f}".format(name, age, var, flt))
+print(f"Formatted output using f-string: Name: {name}, Age: {age}, Integer: {var}, Float: {flt:.2f}")
