@@ -9,7 +9,7 @@ elif operator == '-':
     hasil = angka1 - angka2
     print(f"Hasil: {angka1} - {angka2} = {hasil}")
 elif operator == '*':
-    hasil = angka1 * angka2S
+    hasil = angka1 * angka2
     print(f"Hasil: {angka1} * {angka2} = {hasil}")
 elif operator == '/':
     if angka2 != 0:
