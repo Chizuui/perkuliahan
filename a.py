@@ -3,5 +3,5 @@
 #
 #print("Selamat datang, ", nama, ". Anda berusia", usia, "tahun.")
 
-angka = input("masukan sebuah angka : ")
-print(n+10)
+angka =int(input("masukan sebuah angka : "))
+print(angka+10)
