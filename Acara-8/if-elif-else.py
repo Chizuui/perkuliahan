@@ -7,7 +7,7 @@
 # else:
 #     print("angka negatif")
 
-hari = input("Masukkan hari (Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu): ")
+hari = input("Masthx infukkan hari (Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu): ")
 if hari == "Senin":
     print("Hari ini adalah hari Senin")
 elif hari == "Selasa":
