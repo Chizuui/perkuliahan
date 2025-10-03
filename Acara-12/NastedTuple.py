@@ -1,0 +1,11 @@
+tuple1 = (1,2,3)
+tuple2 = ('satu', 'dua', 'tiga')
+tuple3 = ('andi', 23,68.5)
+tuple4 = (tuple1, tuple2, tuple3)
+
+print (tuple1)
+print (tuple2)
+print (tuple3)
+print (tuple4)
+print (tuple4[1][2])
+print (tuple4[2][0])
