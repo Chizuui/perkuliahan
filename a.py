@@ -5,3 +5,4 @@
 
 angka =int(input("masukan sebuah angka : "))
 print(angka+10)
+
