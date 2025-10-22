@@ -1,5 +1,10 @@
-def salam(name) :
-    print ("Halo, " , name , "!")
+def halo(SalamPebuka):
+    print(SalamPebuka)
 
-    salam ("Andi")
-    salam (123)
+halo("Selamat Pagi")
+
+def salam(name):
+    print("Selamat Pagi", name)
+
+salam("Budi")
+salam(123)
