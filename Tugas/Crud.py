@@ -1,36 +1,33 @@
 # Variabel global untuk menyimpan data 
 # Kita menggunakan list (daftar) dari dictionary
-# Contoh: [{"nama": "Yogiswara", "alamat": "taman gading 3"}]
+
 data_mahasiswa = []
 
 def tampilkan_data():
-    """
-    Fungsi untuk menampilkan semua data yang tersimpan.
-    Sesuai dengan langkah di Tampilan 2 (menu 2, 3) dan Tampilan 2 (menu 4).
-    [cite: 18, 29, 34]
-    """
+    # Fungsi untuk menampilkan semua data yang tersimpan.
+    # Sesuai dengan langkah di Tampilan 2 (menu 2, 3) dan Tampilan 2 (menu 4).
+
     print("\n--- Daftar Data Tersimpan ---")
     if not data_mahasiswa:
         print("Belum ada data yang tersimpan.")
     else:
-        # Menampilkan data sesuai format, misal: "1. Yogiswara, taman gading 3" [cite: 19]
+        # Menampilkan data sesuai format
         for i, data in enumerate(data_mahasiswa, start=1):
             print(f"{i}. {data['nama']}, {data['alamat']}")
     print("-----------------------------")
 
 def tambah_data():
-    """
-    Fungsi untuk menu 1: Tambah data [cite: 4, 9]
-    """
+    # Fungsi untuk menu 1: Tambah data
+
     print("\n--- Menu 1: Tambah Data ---")
-    nama = input("Masukkan data nama: ")       # [cite: 10]
-    alamat = input("Masukkan data alamat: ")   # [cite: 12]
+    nama = input("Masukkan data nama: ")
+    alamat = input("Masukkan data alamat: ")
     
     # Simpan data ke dalam list [cite: 14, 15]
     data_mahasiswa.append({"nama": nama, "alamat": alamat})
     
     print("\nData baru berhasil ditambahkan!")
-    # Program akan otomatis kembali ke menu utama setelah fungsi selesai [cite: 16]
+    # Program akan otomatis kembali ke menu utama setelah fungsi selesai
 
 def ubah_data():
     """
@@ -45,7 +42,7 @@ def ubah_data():
         return # Kembali ke menu utama
 
     try:
-        # Meminta input nomor data yang akan diubah [cite: 22, 23]
+        # Meminta input nomor data yang akan diubah
         pilihan_str = input("Pilih data yang akan dirubah : ")
         pilihan = int(pilihan_str)
         
@@ -54,15 +51,15 @@ def ubah_data():
         
         # Validasi apakah nomor yang dipilih ada di dalam list
         if 0 <= index < len(data_mahasiswa):
-            # Langkah 2: Meminta input data baru [cite: 24]
+            # Langkah 2: Meminta input data baru
             print(f"Anda akan mengubah data ke-{pilihan}: {data_mahasiswa[index]['nama']}")
-            nama_baru = input("Masukkan nama baru: ")       # [cite: 25]
-            alamat_baru = input("Masukkan alamat baru: ")   # [cite: 26]
+            nama_baru = input("Masukkan nama baru: ")
+            alamat_baru = input("Masukkan alamat baru: ")
             
-            # Langkah 3: Lakukan proses perubahan data [cite: 27]
+            # Langkah 3: Lakukan proses perubahan data
             data_mahasiswa[index] = {"nama": nama_baru, "alamat": alamat_baru}
             print("\nData berhasil diubah!")
-            # Program akan otomatis kembali ke menu utama [cite: 27]
+            # Program akan otomatis kembali ke menu utama
         else:
             print("Nomor data tidak valid.")
             
@@ -70,11 +67,9 @@ def ubah_data():
         print("Input tidak valid. Harap masukkan angka.")
 
 def hapus_data():
-    """
-    Fungsi untuk menu 3: Hapus data [cite: 6, 28]
-    """
+
     print("\n--- Menu 3: Hapus Data ---")
-    # Langkah 1: Menampilkan data [cite: 29]
+
     tampilkan_data()
     
     if not data_mahasiswa:
@@ -101,20 +96,18 @@ def hapus_data():
     except ValueError:
         print("Input tidak valid. Harap masukkan angka.")
 
-# --- Program Utama ---
 def jalankan_program():
-    """
-    Fungsi utama untuk menjalankan loop menu.
-    """
+
+    # Fungsi utama untuk menjalankan loop menu.
+
     while True:
-        # Menampilkan Tampilan 1 (Menu Utama) [cite: 2, 3]
         print("\nMenu")
-        print("1. Tambah data")  # [cite: 4]
-        print("2. Ubah data")    # [cite: 5]
-        print("3. Hapus data")   # [cite: 6]
-        print("4. Tampil data")  # [cite: 7]
+        print("1. Tambah data")
+        print("2. Ubah data")
+        print("3. Hapus data")
+        print("4. Tampil data")
         
-        pilihan = input("Pilihlah no menu diatas: ") # [cite: 8]
+        pilihan = input("Pilihlah no menu diatas: ")
         
         if pilihan == '1':
             tambah_data()
@@ -123,14 +116,10 @@ def jalankan_program():
         elif pilihan == '3':
             hapus_data()
         elif pilihan == '4':
-            # Tampilan 2 (jika dipilih no 4) [cite: 33]
-            # Langkah 1: Tampilkan data [cite: 34]
             tampilkan_data()
-            # Langkah 2: Kembali ke menu (setelah user menekan Enter) [cite: 34]
             input("\nTekan Enter untuk kembali ke menu...")
         else:
             print("Pilihan tidak valid. Silakan pilih nomor 1-4.")
 
-# Memulai eksekusi program
-if __name__ == "__main__":
-    jalankan_program()
+    
+jalankan_program()
