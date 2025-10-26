@@ -1,12 +1,9 @@
 # Variabel global untuk menyimpan data 
-# Kita menggunakan list (daftar) dari dictionary
+# menggunakan list (daftar) dari dictionary
 
 data_mahasiswa = []
 
 def tampilkan_data():
-    # Fungsi untuk menampilkan semua data yang tersimpan.
-    # Sesuai dengan langkah di Tampilan 2 (menu 2, 3) dan Tampilan 2 (menu 4).
-
     print("\n--- Daftar Data Tersimpan ---")
     if not data_mahasiswa:
         print("Belum ada data yang tersimpan.")
@@ -23,18 +20,17 @@ def tambah_data():
     nama = input("Masukkan data nama: ")
     alamat = input("Masukkan data alamat: ")
     
-    # Simpan data ke dalam list [cite: 14, 15]
+    # Simpan data ke dalam list
     data_mahasiswa.append({"nama": nama, "alamat": alamat})
     
     print("\nData baru berhasil ditambahkan!")
-    # Program akan otomatis kembali ke menu utama setelah fungsi selesai
 
 def ubah_data():
     """
     Fungsi untuk menu 2: Ubah data [cite: 5, 17]
     """
     print("\n--- Menu 2: Ubah Data ---")
-    # Langkah 1: Menampilkan data [cite: 18]
+    # Langkah 1: Menampilkan data
     tampilkan_data()
     
     if not data_mahasiswa:
@@ -46,7 +42,7 @@ def ubah_data():
         pilihan_str = input("Pilih data yang akan dirubah : ")
         pilihan = int(pilihan_str)
         
-        # Konversi ke index list (dimulai dari 0)
+        # Konversi ke index list
         index = pilihan - 1
         
         # Validasi apakah nomor yang dipilih ada di dalam list
@@ -59,7 +55,6 @@ def ubah_data():
             # Langkah 3: Lakukan proses perubahan data
             data_mahasiswa[index] = {"nama": nama_baru, "alamat": alamat_baru}
             print("\nData berhasil diubah!")
-            # Program akan otomatis kembali ke menu utama
         else:
             print("Nomor data tidak valid.")
             
@@ -77,7 +72,6 @@ def hapus_data():
         return # Kembali ke menu utama
         
     try:
-        # Meminta input nomor data yang akan dihapus [cite: 30]
         pilihan_str = input("Pilih data no data yang akan dihapus : ")
         pilihan = int(pilihan_str)
         
@@ -86,10 +80,9 @@ def hapus_data():
         
         # Validasi apakah nomor yang dipilih ada di dalam list
         if 0 <= index < len(data_mahasiswa):
-            # Langkah 2: Melakukan penghapusan data [cite: 32]
+            # Menghaops data dari list
             data_yang_dihapus = data_mahasiswa.pop(index)
             print(f"\nData '{data_yang_dihapus['nama']}' berhasil dihapus.")
-            # Program akan otomatis kembali ke menu utama [cite: 32]
         else:
             print("Nomor data tidak valid.")
             
