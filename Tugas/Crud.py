@@ -56,10 +56,10 @@ def ubah_data():
             data_mahasiswa[index] = {"nama": nama_baru, "alamat": alamat_baru}
             print("\nData berhasil diubah!")
         else:
-            print("Nomor data tidak valid.")
+            print("Nomor data invalid.")
             
     except ValueError:
-        print("Input tidak valid. Harap masukkan angka.")
+        print("Input Invalid. Masukkan Angka.")
 
 def hapus_data():
 
@@ -84,10 +84,10 @@ def hapus_data():
             data_yang_dihapus = data_mahasiswa.pop(index)
             print(f"\nData '{data_yang_dihapus['nama']}' berhasil dihapus.")
         else:
-            print("Nomor data tidak valid.")
+            print("Nomor data invalid.")
             
     except ValueError:
-        print("Input tidak valid. Harap masukkan angka.")
+        print("Input Invalid. Masukkan Angka.")
 
 def jalankan_program():
 
@@ -112,7 +112,7 @@ def jalankan_program():
             tampilkan_data()
             input("\nTekan Enter untuk kembali ke menu...")
         else:
-            print("Pilihan tidak valid. Silakan pilih nomor 1-4.")
+            print("Pilihan invalid. Pilih nomor 1-4.")
 
     
 jalankan_program()
