@@ -143,7 +143,7 @@ def konversi_suhu():
 def MenuUtama():
     print("==============================================")
     print("WORKSHOP PEMROGRAMAN DASAR")
-    print("Selamat Datang di Program Kalkulator Sederhana")
+    print("Selamat Datang di Program Konversi Suhu Sederhana")
     print("==============================================")
     print("1. Konversi Suhu")
     print("2. Keluar")
